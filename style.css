@@ -320,7 +320,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr;
   gap: 50px;
-  margin: 125px 125px;
+  margin: 175px 125px;
 }
 
 .product_display img {
@@ -409,12 +409,12 @@ header {
 @media (max-width: 1480px) {
   .product_container {
     grid-template-columns: 1fr 0.5fr;
-    margin: 125px 50px;
+    margin: 175px 50px;
   }
 
   .product_information {
     order: 1;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: 150px;
   }
 
@@ -435,7 +435,7 @@ header {
 @media (max-width: 1050px) {
   .product_container {
     gap: 30px;
-    margin: 125px 30px;
+    margin: 175px 30px;
   }
 
   .product_display {
@@ -511,7 +511,7 @@ header {
   }
 
   .product_information {
-    margin: 0 auto;
+    margin: 50px auto 0px auto;
     order: 0;
   }
 
