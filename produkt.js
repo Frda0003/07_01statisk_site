@@ -1,4 +1,4 @@
-let productId = 1571;
+let productId = 1587;
 
 let productContainer = document.querySelector(".product_container");
 

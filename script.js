@@ -1,4 +1,4 @@
 document.getElementById("menu-icon").addEventListener("click", function () {
   const navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("show"); // Toggler 'show' klassen
+  navLinks.classList.toggle("show");
 });
