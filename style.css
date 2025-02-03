@@ -74,16 +74,17 @@ header {
 @media (max-width: 895px) {
   .navbar {
     padding: 20px 20px;
+    border-bottom-right-radius: 5px;
   }
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px;
-    left: 5px;
+    top: 0px;
+    left: 0px;
     font-size: 1rem;
     background-color: rgb(181, 181, 181);
-    width: 135px;
+    width: 45%;
     z-index: 100;
   }
 
@@ -100,10 +101,20 @@ header {
     display: none;
   }
 
+  .nav-links li:first-child {
+    margin-top: 50px;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
   .nav-links li {
-    margin: 17.5px 0;
-    padding: 10px;
+    margin: 0px 15px;
+    padding: 50px 0px;
+    text-align: center;
     border-bottom: 1px solid black;
+    font-weight: 999;
   }
 
   .menu-icon {
@@ -115,6 +126,7 @@ header {
     cursor: pointer;
     z-index: 1;
     transition: 0.3s ease;
+    z-index: 1000;
   }
 
   .menu-icon:hover {
@@ -187,19 +199,11 @@ header {
 
 /*************************** MAIN - Produktliste*********************/
 
-.product_list_main {
-  margin: 200px 35px;
-}
-
-.product_list_main h2 {
-  font-size: 2.5rem;
-}
-
 .product_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 35px;
-  margin-top: 75px;
+  margin-top: 200px;
 }
 
 .product_list_container a {
@@ -262,13 +266,6 @@ header {
   position: absolute;
   margin-top: 550px;
   padding-left: 10px;
-  color: lightgrey;
-}
-
-.brand_name {
-  position: absolute;
-  margin-top: 550px;
-  padding-left: 70px;
   color: lightgrey;
 }
 
@@ -414,6 +411,7 @@ header {
 
   .product_information {
     order: 1;
+    grid-column: span 2;
     margin-top: 100px;
     margin-left: 150px;
   }
@@ -516,7 +514,7 @@ header {
   }
 
   .buy_section {
-    margin: 50px 75px 0px 75px;
+    margin: 50px 25px 0px 25px;
     padding: 35px 30px 0px 30px;
     height: 400px;
   }
