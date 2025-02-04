@@ -1,6 +1,12 @@
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+const myCategory = urlParams.get(`category`);
+
 const productListContainer = document.querySelector(".product_list_container");
 
-fetch(`https://kea-alt-del.dk/t7/api/products?limit=100`)
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${myCategory}`)
   .then((response) => response.json())
   .then((data) => showList(data));
 
@@ -8,7 +14,7 @@ function showList(data) {
   const markup = data
     .map(
       (product) =>
-        ` <a href="produkt.html">
+        ` <a href="produkt.html?product=${product.id}">
                     <div class="card_productlist">
                         <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}">
                         <div class="display_name">
