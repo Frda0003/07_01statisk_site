@@ -1,13 +1,19 @@
-let productId = 1587;
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+
+const myProduct = urlParams.get(`product`);
 
 let productContainer = document.querySelector(".product_container");
 
-fetch(`https://kea-alt-del.dk/t7/api/products/${productId}}`)
+fetch(`https://kea-alt-del.dk/t7/api/products/${myProduct}`)
   .then((response) => response.json())
+
   .then((data) => {
     productContainer.innerHTML = `
          
-    <div class="product_display"><img src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="${data.productdisplayname}"></div>
+    <div class="product_display"><img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="${data.productdisplayname}">
+            </div>
 
             <div class="product_information">
                 <h1>Product Information</h1>
